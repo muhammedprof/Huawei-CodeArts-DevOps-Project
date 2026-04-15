@@ -1,0 +1,8 @@
+FROM openjdk:8-alpine
+
+WORKDIR /code
+
+# Adding target
+ADD target /code/target
+
+CMD ["java", "-jar", "target/worker-jar-with-dependencies.jar"]
